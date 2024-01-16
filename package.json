@@ -1,22 +1,19 @@
 {
-  "name": "@csvbox/vuejs3",
+  "name": "@csvbox/kvuejs3",
   "version": "1.1.4",
   "description": "Vue adapter (Vue Version 3) for csvbox.io",
   "author": "csvbox-io",
   "license": "MIT",
   "private": false,
-
   "main": "dist/vue-adapter-v3.ssr.js",
   "browser": "dist/vue-adapter-v3.esm.js",
   "module": "dist/vue-adapter-v3.esm.js",
   "unpkg": "dist/vue-adapter-v3.min.js",
-
   "files": [
     "dist/*",
     "src/**/*.vue"
   ],
   "sideEffects": false,
-
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.js",
     "prebuild": "rimraf ./dist",
@@ -25,10 +22,7 @@
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
-
-  "dependencies": {
-  },
-
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",

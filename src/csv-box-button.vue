@@ -1,8 +1,6 @@
 <script>
 import { defineComponent } from 'vue';
 import { isProxy, toRaw } from 'vue';
-const packageJson = require("./../package.json")
-
 export default /*#__PURE__*/defineComponent({
   name: 'CSVBoxButton', // vue component name
   props: {
@@ -71,7 +69,7 @@ export default /*#__PURE__*/defineComponent({
             let domain = this.customDomain ? this.customDomain : "app.csvbox.io";
             if(this.dataLocation) { domain = `${this.dataLocation}-${domain}`; }
             let iframeUrl = `https://${domain}/embed/${this.licenseKey}`;
-            iframeUrl += `?library-version=${packageJson.version}`;
+            iframeUrl += `?library-version=1.1.4`;
             iframeUrl += "&framework=vue3";
             if(this.dataLocation) {
                 iframeUrl += "&preventRedirect";
